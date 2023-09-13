@@ -9,3 +9,6 @@
     border: 2px solid yellow;
     border-radius: 20px;
 }
+.flag-container img{
+    width: 100px;
+}

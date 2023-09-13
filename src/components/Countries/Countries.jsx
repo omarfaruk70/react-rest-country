@@ -24,9 +24,10 @@ const Countries = () => {
         const newVisitedCountries = [...visitedCountry, country];
         setVisitedCountry(newVisitedCountries)
     };
-    const handleVisitedFlags = ()=>{
-
-        
+    const handleVisitedFlags = (flag)=>{
+        // console.log('visited flag addings');
+        const newvisitedFlags = [...visitedFlags, flag];
+        setVisitedFlags(newvisitedFlags)
     }
     
     // return all from this component
@@ -38,10 +39,17 @@ const Countries = () => {
                 <h4>Visited Countries: {visitedCountry.length}</h4>
                 <ul>
                     {
-                        visitedCountry.map(country=> <li>{country.name.common}</li>)
+                        visitedCountry.map(country=> <p>{country.name.common}</p>)
                     }
                 </ul>
             </div>
+
+           <div className="flag-container">
+                    {
+                        visitedFlags.map((flag)=> <img  src={flag} alt="" /> )
+                    }
+           </div>
+
            <div className="country-container">
             {
                 countries.map(country=> <Country 
